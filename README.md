@@ -1,7 +1,8 @@
 ## Pipeline Overview 🧬
 
-This Nextflow pipeline automates the processing of sequencing data by:
+A Nextflow-based pipeline that automates the process of downloading, trimming, and assembling Illumina paired-end sequencing data using tools like SRATools, Fastp, FastQC, and SPAdes. Designed for reproducible and modular genome assembly analyses.
 
+Specifically, this pipeline:
 1. **Downloading SRA reads** from a provided accession.
 2. **Trimming** the reads using **fastp**.
 3. **Performing quality control** with **FastQC**.
@@ -12,7 +13,7 @@ The results are organized into the following output directories:
 - `RawReads/` – Downloaded raw SRA files.
 - `CleanedReads/` – Trimmed sequencing reads.
 - `FastQCResults/` – Quality control reports from FastQC.
-- `Assemblies/` – Assembled contigs from Skesa.
+- `Assemblies/` – Assembled contigs from SPAdes.
 
 The pipeline utilizes **Seqera containers** to execute these tasks, ensuring reproducibility and ease of use. It only requires a supplied SRA accession to begin the process, so test data is not needed.
 
